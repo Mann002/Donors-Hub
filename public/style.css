@@ -1,0 +1,513 @@
+html {
+    scroll-behavior: smooth;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+
+#navbar{
+    background-color: #d8203b;
+    top: 0%;
+    
+}
+#brand{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Readex Pro', sans-serif;
+}
+#navbarNav li .ull{
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    
+    
+}
+
+#navbarNav li .ull:hover{
+    background-color: white ;
+    color: #d8203b;
+    border-radius: 10px;
+}
+/* Header Section */
+
+#img  { 
+    background-color: black;
+    display: flex;
+  }
+.img #blood{
+    height: 1rem;
+    opacity: 0.5;
+
+}
+#ptag{
+ color: white;
+ position: relative;
+ top: 5em;
+ opacity: 1;
+ z-index: 1;
+ text-align: center;
+ justify-content: center;
+}  
+.select-menu{
+    display: flex;
+    top: 60%;
+    left: 37%;
+    font-size: large;
+    
+}
+.city{
+    padding-right: 2rem;
+}
+.bloodgroup{
+    padding-right: 30px;
+}
+button, select {
+    text-transform: none;
+    padding: 4px;
+}
+#submit:hover {
+    background-color: red;
+    
+}
+
+p .h1{
+    text-align: center;
+    position: relative;
+    top: 3rem;
+    font-size: large; 
+}
+
+
+
+#column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+#column button{
+    padding: 1rem 2%;position: relative;margin: 6%;border-radius: 12px;
+    margin-top: 8%;
+}
+#column button span{
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    
+}
+.table{
+    padding-top: 15%;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 5%;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 15px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #d8203b;
+    font-size: 15px;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Footer */
+.footer{
+    display: flex;
+    justify-content: center;
+}
+footer{
+    position: relative;
+    bottom: 0%;
+    left: 0rem;
+    background: #dc3545;
+    height: auto;
+    width: 100vw;
+    padding-top: 24px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 18px;
+    color: white;
+}
+.footer-bottom{
+    background: #dc3545;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.footer-bottom p a{
+    color:#44bae8;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .footer-bottom span{
+      text-transform: uppercase;
+      opacity: .4;
+      font-weight: 200;
+  }
+
+  .footer-menu{
+    float: right;
+    display: none;
+  }
+  
+  .footer-menu ul{
+    display: flex;
+  }
+  
+  .footer-menu ul li{
+  padding-right: 5px;
+  display: block;
+  }
+  
+  .footer-menu ul li a{
+    color: #cfd2d6;
+    text-decoration: none;
+  }
+  
+  .footer-menu ul li a:hover{
+    color: #27bcda;
+  }
+  @media (max-width:500px) {
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    }
+
+/* Login     */
+a {
+    text-decoration: none;
+  }
+  /* .cardd {
+    background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
+    background-repeat: no-repeat; */
+  label {
+    font-family: "Raleway", sans-serif;
+    font-size: 11pt;
+  }
+  #forgot-pass {
+    color: #2dbd6e;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 3px;
+    text-align: right;
+  }
+  #card {
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
+  }
+  #card-content {
+    padding: 12px 44px;
+  }
+  #card-title {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+  }
+  #signup {
+    color: #dc3545;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 16px;
+    text-align: center;
+  }
+  #submit-btn {
+    background: #dc3545;
+    border: none;
+    border-radius: 21px;
+    box-shadow: 0px 1px 8px #dc3545;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    margin: 0 auto;
+    margin-top: 70px;
+    transition: 0.25s;
+    width: 153px;
+  }
+  #submit-btn:hover {
+    box-shadow: 0px 1px 18px red;
+  }
+  .form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-border {
+    background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+    height: 1px;
+    width: 100%;
+  }
+  .form-content {
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding-top: 14px;
+  }
+  .underline-title {
+    /* background: -webkit-linear-gradient(right, #a6f77b, #2ec06f); */
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 89px;
+  }
+  .card-title h2{
+      color:#d8203b ;
+  }
+
+  /* Responsive Header */
+  @media only screen and (max-width: 600px) {
+    #img{
+        background-color: white;
+    }
+    #img img{
+        position: relative;
+        height: 50%;
+        display: none;
+    }
+    #ptag{
+        font-size: 2rem;
+        color: black;
+        position: relative;
+        text-align: center;
+        top: 10%;
+        padding-top: 0;
+        padding-bottom: 6%;
+    }
+    #selection{
+        display: flex;
+        flex-direction: row;
+        padding: 0 9%;
+        height: 5%;
+        position: absolute;
+        top: 35%;
+        padding: 0 10%;    
+    }
+    .select-menu{
+        left: 0;
+    }
+    #city{
+        padding: 0 2%;
+    }
+    #bloodgroup{
+        padding: 0 2%;
+    }
+
+    /* Blood Group Section */
+    #container{
+        padding: 8%;
+    }
+    #container .h1{
+        padding: 8%;
+    }
+
+    /* Table section */
+    .ourdonors h2{
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        
+    }
+    /* Footer */
+    footer #about{
+        height: 20%;
+        bottom: 0;
+    }
+}   
+
+/* For tablets */
+@media (min-width: 600px) and (max-width: 1000px) {
+    #img{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #ptag{
+       text-align: center;
+       padding-bottom: 5%;
+      display: flex;
+      flex-wrap: wrap;
+       
+       
+    }
+    #selection{
+        padding: 0 0%;
+        position: absolute;
+        left: 30%;
+        right: 25%; 
+    }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+    #img{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #ptag{
+       text-align: center;
+       padding-bottom: 5%;
+       top: 18%;
+      display: flex;
+      flex-wrap: wrap;
+       
+       
+    }
+    #selection{
+        padding: 10% 0%;
+        position: absolute;
+        top: 13rem;
+        left: 15%;
+        right: 25%; 
+        
+    }
+    #column{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    #column button{
+        padding: 1rem 10%;position: relative;margin: 6%;border-radius: 12px;
+        margin-top: 12%;
+    }
+    #column button span{
+        font-size: 1.5rem;
+        padding: 1rem 1rem;
+        
+    }
+}
+
