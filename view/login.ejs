@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="style.css">
+
+<title>Document</title>
+</head>
+<body>
+  <%- include('navbar'); -%>
+
+      <div id="card">
+        <% if (messages){ %>
+          <div class="alert alert-danger" role="alert">
+            <%= messages %>
+          </div>
+         <% } %>
+        <div id="card-content">
+          <div id="card-title">
+            <h2 style="color: #d8203b; font-size: 2rem;">LOGIN</h2>
+
+            <div class="underline-title"></div>
+          </div>
+          <form action="/login" method="post" class="form">
+            <label for="user-email" style="padding-top:13px">
+                &nbsp;Email
+              </label>
+            <input id="user-email" class="form-content" type="email" name="username" autocomplete="on" required />
+            <div class="form-border"></div>
+            <label for="user-password" style="padding-top:22px">&nbsp;Password
+              </label>
+            <input id="user-password" class="form-content" type="password" name="password" required />
+            <div class="form-border"></div>
+            <a href="#">
+              <legend id="forgot-pass"></legend>
+            </a>
+            <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+            <a href="/register" id="signup">Don't have account yet?</a>
+          </form>
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign In with Google
+          </a>
+        </div>
+      </div>
+
+  
+</body>
+</html>

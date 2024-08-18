@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <title>Donors Hub</title>
+</head>
+
+<body>
+  <%- include('navbar'); -%>
+    <p class="h1" id="ptag">Search For Donor In Your Area</p>
+    <div id="img">
+      <img src="blood donating.jpg" style="opacity: 0.5; top: 100%;width: 100%;" id="blood" alt="Responsive image">
+      <form action="/list" method="post">
+        <div id="selection" class="select-menu" style="position: absolute;">
+
+
+          <div id="city" class="city">
+            <select id="city" name="city" class="form-select select" aria-label="Default select example" required>
+              <option selected>City </option>
+              <option value="Patna">Patna</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Banglore">Banglore</option>
+            </select>
+          </div>
+          <div id="bloodgroup" class="bloodgroup">
+            <select name="blood" class="form-select select" aria-label="Default select example" required>
+              <option selected>Choose Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+          <button id=#submit type="submit"
+            style="padding: 1px 28px; background-color: #d8203b;font-size: large; border-color: #d8203b;" id="submit"
+            class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+
+    </div>
+    <form action="/list" method="post">
+      <div id="container" class="container">
+        <p class="h1" style="color: #d8203b; text-align: center;    position: relative;
+        top: 2.5rem;">Blood Group</p>
+        <div id="column">
+          <button type="submit" name="blood" value="A+" class="btn btn-danger column"> <span>A+</span> </button>
+          <button type="submit" name="blood" value="A-" class="btn btn-danger column"><span>A-</span> </button>
+          <button type="submit" name="blood" value="B+" class="btn btn-danger column"><span>B+</span> </button>
+          <button type="submit" name="blood" value="B-" class="btn btn-danger column"><span>B-</span> </button>
+        </div>
+        <div id="column">
+          <button type="submit" name="blood" value="O+" class="btn btn-danger column"> <span>O+</span> </button>
+          <button type="submit" name="blood" value="O-" class="btn btn-danger column"><span>O-</span> </button>
+          <button type="submit" name="blood" value="AB+" class="btn btn-danger column"><span class="ab">AB+</span>
+          </button>
+          <button type="submit" name="blood" value="AB-" class="btn btn-danger column"><span class="ab">AB-</span>
+          </button>
+        </div>
+    </form>
+    <div class="ourdonors">
+      <h2>OUR DONORS</h2>
+      <div id="donors" class="table-wrapper">
+        <table class="fl-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Blood Group</th>
+              <th>City</th>
+              <th>Contact</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% listItems.forEach(function(items){ %>
+              <% desire.forEach(function(item){ %>
+                <% if (items.bloodGroup===item){ %>
+                  <% if (items.city===cityy || cityy===undefined){ %>
+                    <tr>
+                      <td>
+                        <%= items.name %>
+                      </td>
+                      <td>
+                        <%= items.bloodGroup %>
+                      </td>
+                      <td>
+                        <%= items.city %>
+                      </td>
+                      <td>
+                        <%= items.contact %>
+                      </td>
+                      <td>
+                        <%= items.email %>
+                      </td>
+                    </tr>
+
+
+
+                    <% } %>
+                      <% } %>
+                        <% }) %>
+
+                          <% }) %>
+
+
+          <tbody>
+        </table>
+
+        <!-- <table class="fl-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>City</th>
+            <th>Contact</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% listItems.forEach(function(items){ %>
+            <tr>
+              <td>
+                <%= items.name %>
+              </td>
+              <td>
+                <%= items.bloodGroup %>
+              </td>
+              <td>
+                <%= items.city %>
+              </td>
+              <td>
+                <%= items.contact %>
+              </td>
+              <td>
+                <%= items.email %>
+              </td>
+            </tr>
+            <% }) %>
+
+
+        <tbody>
+      </table> -->
+
+      </div>
+    </div>
+    <!-- Footer -->
+    <%- include('footer'); -%>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
